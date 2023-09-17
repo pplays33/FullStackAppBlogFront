@@ -1,0 +1,106 @@
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    h1{
+        font-family: 'MuseoModerno', cursive;
+        font-size: 90px;
+    }
+    .intro__text{
+        margin-bottom: 50px;
+        border-bottom: 1px solid black;
+    }
+    .popular__post__container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 100px;
+        .content__post{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+            text-align: left;
+            border-right: 1px solid black;
+            .content__text{
+                margin-bottom: 30px;
+            }
+            .btn{
+                font-family: 'Jura', sans-serif;
+                padding: 10px;
+                border-bottom: 1px solid black;
+                color: goldenrod;
+                transition: background-color 0.5s ease;
+            } 
+            .btn:hover {
+                background-color: #000000;
+                color: #ffffff;
+            }
+        }
+    }
+    .list-posts{
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+        gap: 30px;
+        margin-bottom:  30px;
+
+        .post{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 0 10px 5px 
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease-in-out;
+            .post_container{
+                margin-bottom: 10px;
+                box-shadow: inset 0 0 10px rgba(255, 246, 147, 0.5);
+            }
+            .titel_post{
+                font-family: 'Bitter', serif;
+                margin-bottom: 30px;
+                border-bottom: 1px solid goldenrod;
+            }
+        }
+        .post:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+    }
+    .list-posts2{
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        .post{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease-in-out;
+            .post_container{
+                margin-bottom: 10px;
+            }
+            .titel_post{
+                font-family: 'Bitter', serif;
+                margin-bottom: 30px;
+                border-bottom: 1px solid goldenrod;
+            }
+        }
+        .post:hover{
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+}
+
+p{
+    font-family: 'Jura', sans-serif;
+    font-size: 21px;
+}
