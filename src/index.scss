@@ -1,4 +1,20 @@
-
 body{
-    
+    h1{
+        font-family: 'MuseoModerno', cursive;
+        font-size: 90px;
+    }
+
+    p{
+        // font-family: 'Raleway', sans-serif;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 21px;
+    }
+
+    .container{
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
 }

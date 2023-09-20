@@ -1,0 +1,23 @@
+
+.intro{
+    .intro__text{
+        margin-bottom: 50px;
+        border-bottom: 1px solid black;
+    }
+
+    //titel
+    .intro__subtitel{
+        text-align: left;
+        font-family: 'Oswald', sans-serif;
+        // font-family: 'Exo 2', sans-serif;
+        font-size: 32px;
+    }
+    .intro__subtitel__two{
+        text-align: left;
+        padding-left: 100px;
+        margin-bottom: 40px;
+        // font-family: 'Exo 2', sans-serif;
+        font-family: 'Cormorant Infant', serif;
+        font-size: 32px;
+    }
+}

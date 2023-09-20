@@ -1,0 +1,32 @@
+.list-posts {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-bottom: 30px;
+
+    .post {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        border: 1px solid black;
+        transition: box-shadow 0.3s ease-in-out;
+
+        .post_container {
+            margin-bottom: 10px;
+        }
+
+        .titel_post {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 300;
+            margin-bottom: 30px;
+            border-bottom: 1px solid goldenrod;
+        }
+    }
+
+    .post:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+}
