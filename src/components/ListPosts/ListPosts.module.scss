@@ -3,14 +3,18 @@
     grid-template-columns: 1fr 2fr;
     gap: 30px;
     margin-bottom: 30px;
-
+    .link{
+        text-decoration: none;
+        color: black;
+    }
     .post {
         padding: 10px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: center;
         align-items: center;
         text-align: left;
+        border-radius: 10px;
         border: 1px solid black;
         transition: box-shadow 0.3s ease-in-out;
 
@@ -19,11 +23,40 @@
         }
 
         .titel_post {
-            font-family: 'Exo 2', sans-serif;
+            font-family: 'Nunito', sans-serif;
             font-weight: 300;
             margin-bottom: 30px;
             border-bottom: 1px solid goldenrod;
         }
+        .text_post{
+            margin-bottom: 30px;
+        }
+
+        .likes_img_container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .likes_img{
+            display: flex;
+            padding-top: 5px;
+            width: 40px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 10px;
+            .post_container{
+                display: flex;
+                // flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }            
+        }
+        .likes_img:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+
     }
 
     .post:hover {

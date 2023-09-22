@@ -1,0 +1,27 @@
+.container_tags_list{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid goldenrod;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    .tags_list{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+    .tag{
+        margin-right: 10px;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        p{
+            font-family: 'Nunito', sans-serif;
+        }
+
+    }
+}

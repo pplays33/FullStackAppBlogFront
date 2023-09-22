@@ -1,22 +1,24 @@
 import Intro from "../components/Intro/Intro";
 import PopPost from "../components/PopPost/PopPost";
 import ListPosts from "../components/ListPosts/ListPosts";
+import TagsList from "../components/TagsList/TagsList";
 import '../App.scss';
 
 import { useDispatch, useSelector } from "react-redux";
-import { feathPosts } from "../redux/slices/posts";
+import { feathPosts, feathTags } from "../redux/slices/posts";
 import { useEffect } from "react";
 // import axios from '../axios';
 
 export default function Home() {
     const dispatch = useDispatch();
     const { posts, tags } = useSelector( state => state.posts ); 
-
+    
     const isPostsLoading = posts.status !== "loaded";
+    const isTagsLoading = tags.status !== "loaded";
 
     useEffect(() => {
         dispatch(feathPosts());
-        
+        dispatch(feathTags());
     }, []);
 
     // console.log(isPostsLoading);
@@ -25,6 +27,7 @@ export default function Home() {
             <div className='container'>
                 <Intro />
                 <PopPost />
+                <TagsList tags={isTagsLoading ? [1] : tags.items } isloading={isTagsLoading} />
                 <ListPosts posts={ isPostsLoading ? [1, 2, 3] : posts.items } isloading={isPostsLoading}/>
             </div>
         </>
