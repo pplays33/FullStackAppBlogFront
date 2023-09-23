@@ -1,31 +1,38 @@
 .list-posts {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     gap: 30px;
     margin-bottom: 30px;
+    h2{
+        color: var(--accent-07, #3DBDA7);
+    }
     .link{
         text-decoration: none;
-        color: black;
+        color: white;
     }
     .post {
+        height: 134px;
         padding: 10px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         // justify-content: center;
         align-items: center;
-        text-align: left;
-        border-radius: 10px;
-        border: 1px solid black;
+        text-align: center;
+        border-radius: 40px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        border: 0 solid rgb(249, 249, 249);
         transition: box-shadow 0.3s ease-in-out;
 
         .post_container {
-            margin-bottom: 10px;
+            width: 100px;
+            height: 100px;
+            // margin-bottom: 10px;
         }
 
         .titel_post {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Marmelad', sans-serif;
             font-weight: 300;
-            margin-bottom: 30px;
+            // margin-bottom: 30px;
             border-bottom: 1px solid goldenrod;
         }
         .text_post{

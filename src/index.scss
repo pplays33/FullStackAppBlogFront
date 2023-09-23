@@ -5,25 +5,29 @@
 // font-family: 'Nunito', sans-serif;
 
 body{
+    background: linear-gradient(131deg, #232323 26.84%, #262626 53.62%, rgba(0, 0, 0, 0.84) 101.2%, rgba(10, 10, 10, 0.57) 110.1%, rgba(10, 4, 4, 0.33) 113.67%, rgba(0, 0, 0, 0.17) 116.36%, rgba(0, 0, 0, 0.00) 131.01%);
+    color: white;
+
     h1{
         font-family: 'MuseoModerno', cursive;
         font-size: 90px;
     }
 
     h2{
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: 'Marmelad', sans-serif;
     }
 
     p{
         // font-family: 'Raleway', sans-serif;
         // font-family: 'Mulish', sans-serif;
-        font-family: 'Oranienbaum', serif;
+        font-family: 'Tenor Sans', sans-serif;
         // font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 21px;
     }
 
     .container{
         max-width: 900px;
+        padding-top: 10px;
         margin: 0 auto;
         text-align: center;
     }

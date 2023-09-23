@@ -1,7 +1,10 @@
 .popular__post__container{
+    padding: 24px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 100px;
+    border-radius: 40px;
+    background-image: url(./assets/intro2.jpg);
     .content__post{
         display: flex;
         flex-direction: column;
@@ -11,12 +14,15 @@
         // border-left: 1px solid black;
         .content__text{
             margin-bottom: 30px;
+            font-size: 18px;
         }
         .btn{
             font-family: 'Exo 2', sans-serif;
             padding: 10px;
-            border-bottom: 1px solid black;
-            color: goldenrod;
+            border-bottom: 0 solid black;
+            color: var(--accent-07, #3DBDA7);
+            border-radius: 44px;
+            background-color: white;
             transition: background-color 0.5s ease;
         } 
         .btn:hover {
