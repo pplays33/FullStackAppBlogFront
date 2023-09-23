@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "../axios";
 
 import FullPostComp from "../components/FullPostComp/FullPostComp";
-
+import TagsList from "../components/TagsList/TagsList";
 
 export default function FullPost(){
     const [data, setData] = useState();
@@ -32,6 +32,7 @@ export default function FullPost(){
 
     return(
         <>
+            <TagsList tags={data.tags}/>
             <FullPostComp
                 id={data._id}
                 titel={data.titel}
