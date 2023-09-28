@@ -19,7 +19,8 @@
         align-items: center;
         text-align: center;
         border-radius: 40px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        background: #1B1B1B;
+        // box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         border: 0 solid rgb(249, 249, 249);
         transition: box-shadow 0.3s ease-in-out;
 
@@ -33,7 +34,7 @@
             font-family: 'Marmelad', sans-serif;
             font-weight: 300;
             // margin-bottom: 30px;
-            border-bottom: 1px solid goldenrod;
+            border-bottom: 1px solid #3DBDA7;
         }
         .text_post{
             margin-bottom: 30px;

@@ -30,6 +30,14 @@ export default function TagsList({ tags, isloading }) {
                         )
                     }
                 </div>
+                <div className={styles['profile_about_container']} >
+                    <div className={styles['profile_about']} >
+                        <h2> Name lastname</h2>
+                        <p> activiti:  </p>
+                        <p> activiti:  </p>
+                        <p> activiti:  </p>
+                    </div>
+                </div>
             </div>
         </>
     );

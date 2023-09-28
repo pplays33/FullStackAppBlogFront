@@ -1,6 +1,8 @@
 .container_tags_list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 40px;
+    // height: 40px;
     padding: 5px;
     margin-bottom: 50px;
     margin-top: 10px;
@@ -24,5 +26,10 @@
             font-family: 'Nunito', sans-serif;
         }
 
+    }
+    //#FECA01
+    .profile_about_container{
+        border-radius: 20px;
+        background: var(--accent-07, #3DBDA7);
     }
 }

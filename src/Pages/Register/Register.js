@@ -1,11 +1,11 @@
-import styles from './login.module.scss';
+import styles from './register.module.scss';
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from "react-router-dom";
 
-import { feathAuth, selectorIsAuth } from '../../redux/slices/auth';
+import { feathRegister, selectorIsAuth } from '../../redux/slices/auth';
 
-export default function Login() {
+export default function Register() {
     const isAuth = useSelector(selectorIsAuth);
     const dispatch = useDispatch();
 
@@ -16,12 +16,11 @@ export default function Login() {
     } = useForm();
 
     const onSubmit = async (data) => {
-        const data_auth = await dispatch(feathAuth(data));
-        console.log(data_auth);
+        const data_auth = await dispatch(feathRegister(data));
+        // console.log(data_auth);
 
         if(!data_auth.payload) {
-            
-            alert("не удалось войти!");
+            alert("не удалось зарегестрироватся!");
             return;
         }
 
@@ -44,10 +43,12 @@ export default function Login() {
                 {/* <div className={styles['login']} > */}
                 <h2> Login →</h2>
                 <form onSubmit={handleSubmit(onSubmit)} className={styles['login']}>
+                    <input {...register('fullName', { required: true })} placeholder='fullName' className={styles['email']} />
+                    {errors.fullName && <p>fullName is required.</p>}
                     <input {...register('email', { required: true })} placeholder='E-mail' className={styles['email']} />
-                    {errors.password && <p>Last name is required.</p>}
+                    {errors.email && <p>email is required.</p>}
                     <input {...register('password', { required: true })} type='password' placeholder='Password' className={styles['password']} />
-                    {errors.password && <p>Last name is required.</p>}
+                    {errors.password && <p>password is required.</p>}
                     <input type="submit" className={styles['btn']}/>
                 </form>
                 {/* </div> */}

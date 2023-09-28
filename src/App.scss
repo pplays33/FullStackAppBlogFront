@@ -3,9 +3,15 @@
 // font-family: 'Raleway', sans-serif;
 
 .container{
+    padding: 5px;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    border-radius: 54px;
+    // border-top-left-radius: 0;
+    // border-bottom-left-radius: 0;
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    background:#000;
 }
 //     // h1{
 //     //     font-family: 'MuseoModerno', cursive;

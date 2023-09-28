@@ -1,0 +1,47 @@
+.container_login{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 50px;
+        color: green;
+        margin-bottom: 20px;
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .email {
+                margin-bottom: 10px;
+                width: 400px;
+                height: 50px;
+                background: var(--primary-10, #00453F);
+                border-radius: 30px;
+                border: 0 solid black;
+                color: white;
+            }
+        .password{
+            margin-bottom: 10px;
+            width: 400px;
+            height: 50px;
+            background: var(--primary-10, #00453F);
+            border-radius: 30px;
+            border: 0 solid black;
+            color: white;
+        }
+        .btn{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 10px;
+            border: 0;
+            color: goldenrod;
+            transition: background-color 0.5s ease;
+        } 
+        .btn:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    }
+}

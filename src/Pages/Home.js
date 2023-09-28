@@ -28,7 +28,7 @@ export default function Home() {
                 <Intro />
                 <PopPost />
                 <TagsList tags={isTagsLoading ? [1] : tags.items } isloading={isTagsLoading} />
-                <ListPosts posts={ isPostsLoading ? [1, 2, 3] : posts.items } isloading={isPostsLoading}/>
+                <ListPosts posts={ isPostsLoading ? [1, 2, 3, 4, 5] : posts.items } isloading={isPostsLoading}/>
             </div>
         </>
     );
