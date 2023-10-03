@@ -17,6 +17,7 @@ export default function FullPost(){
                 (res) => {
                     setData(res.data);
                     setIsLoading(false);
+                    console.log(res.data);
                 }
             )
             .catch((err) => {
@@ -38,7 +39,7 @@ export default function FullPost(){
                 titel={data.titel}
                 text={data.text}
                 viewCount={data.viewCount}
-                imageUrl={data.imageUrl}
+                imageUrl={data.imageUrl ? `http://localhost:4444${data.imageUrl}` :  ''}
             />
         </>
     );

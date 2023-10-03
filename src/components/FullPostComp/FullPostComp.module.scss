@@ -3,13 +3,21 @@
     padding: 10px;
     .fullPost{
         .img_post{
-
+            width: 300px;
+            height: 300px;
         }
         .fullPost_titel{
             margin-bottom: 30px;
         }
         .fullPost_text{
-
+            text-align: left;
+            ul{
+                list-style-type: square; /* задаем тип маркера */
+                list-style-position: inside; /* задаем позицию маркера */
+            }
+            h1{
+                font-family: 'Marmelad', sans-serif;
+            }
         }
     }
 }

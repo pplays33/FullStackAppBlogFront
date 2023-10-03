@@ -9,6 +9,7 @@ import About from './Pages/About';
 import FullPost from './Pages/FullPost';
 import Login from './Pages/Login/LoginPage';
 import Register from './Pages/Register/Register';
+import CreatePost from './Pages/CreatePost/CreatePost';
 
 import { Aside } from './components/Aside/Aside';
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/posts/:id' element={<FullPost />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/createPost' element={<CreatePost />} />
           <Route path='/about' element={<About />} />
         </Routes>
         {/* <RightAside /> */}
