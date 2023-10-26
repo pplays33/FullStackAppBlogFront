@@ -1,0 +1,25 @@
+.Header{
+    margin-bottom: 20px;
+    color: black;
+    a{
+        color: var(--accent-07, #3DBDA7);
+    }
+    // border-right: 0px solid #fff;
+    border-color: #fff;
+    // background: var(--accent-07, #3DBDA7);
+    button{
+        background: #fff;
+        border-color: #fff !important;
+        color: var(--accent-07, #3DBDA7);
+    }
+    button:hover{
+        background: #444;
+    }
+ 
+}
+
+// @media (max-width: 1200px) {
+//     .Header{
+//         display: block;
+//     }
+// }

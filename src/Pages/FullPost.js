@@ -11,7 +11,7 @@ export default function FullPost(){
 
     const { id } = useParams();
 
-    useState(() => {
+    useEffect(() => {
         axios.get(`/posts/${id}`)
             .then(
                 (res) => {

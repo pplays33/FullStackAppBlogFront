@@ -1,6 +1,7 @@
 import styles from './CreatePost.module.scss';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
 
 import SimpleMDE from "react-simplemde-editor";
 import 'easymde/dist/easymde.min.css';
@@ -8,14 +9,18 @@ import 'easymde/dist/easymde.min.css';
 import axios from '../../axios';
 import { useState, useCallback, useMemo, useRef } from 'react';
 import { useNavigate, Navigate } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectorIsAuth } from '../../redux/slices/auth';
+import { setEditPost } from '../../redux/slices/posts';
+
 
 export default function CreatePost() {
     const navigate = useNavigate();
+    const dispath = useDispatch();
+    const editPost = useSelector(state => state.posts.editPost.item);
     const isAuth = useSelector(selectorIsAuth);
-    const [text, setText] = useState("'Введите текст...'");
-    const [titel, setTitle] = useState("Заголовок");
+    const [text, setText] = useState(editPost ? editPost.text : "'напишите тут пост...'");
+    const [titel, setTitle] = useState( editPost ? editPost.titel : "Заголовок");
     const [tags, setTags] = useState("тэги");
     const [imgUrl, setImgUrl] = useState("");
     const fileChangeRef = useRef(null);
@@ -42,20 +47,29 @@ export default function CreatePost() {
     const SubmitPost = async () => {
         const tagsArr = tags.split(" ");
         try {
+            console.log(editPost);
             const Post = {
                 titel: titel,
                 tags: tagsArr,
                 text: text,
                 imageUrl: imgUrl,
             }
+            
+            if(editPost){
+                console.log('перевая точка');
+                let { data: {succsec }} = await axios.patch(`/posts/${editPost.id}`, Post);
+                alert(succsec ? "пост успешно обновлен" : "упс!");
+                dispath(setEditPost(null));
+                navigate(`/postsMy`);
+                return;
+            }
 
-            const { data } = await axios.post('/posts', Post);
-
+            console.log('вторая точка');
+            const { data } = await axios.post('/posts', Post); 
             const id_post = data._id;
-
-            console.log(id_post);
+            console.log(data);
             navigate(`/posts/${id_post}`);
-            // <Navigate  to={`/posts/${id_post}`}/>
+
         } catch (error) {
             console.log(error);
         }
@@ -109,22 +123,22 @@ export default function CreatePost() {
 
                 <TextField
                     classes={{ root: styles.title }}
-                    variant="standard"
+                    variant="filled"
                     value={titel}
                     onChange={e => setTitle(e.target.value)}
-                    placeholder="Заголовок поста..."
+                    placeholder= "Заголовок поста..."
                     fullWidth
                 />
                 <TextField 
                     classes={{ root: styles.tags }}
-                    variant="standard"
+                    variant="filled"
                     value={tags}
                     onChange={e => setTags(e.target.value)} 
                     placeholder="Тэги" 
                     fullWidth
                 />
 
-                <SimpleMDE  value={text} className={styles.editor} onChange={onChange} options={options} />
+                <SimpleMDE  value={editPost ? editPost.text : text} className={styles.editor} onChange={onChange} options={options} />
                 <Button size="large" variant="outlined" onClick={SubmitPost}>
                     Опубликовать
                 </Button>

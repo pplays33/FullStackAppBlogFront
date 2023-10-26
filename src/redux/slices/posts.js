@@ -14,22 +14,36 @@ export const feathTags = createAsyncThunk('posts/feathTags', async () => {
     return data;
 });
 
+// export const feathEditPost = createAsyncThunk('posts/feathEditPost', async (params) => {
+//     return params;
+// });
+
 
 const initialState = {
     posts: {
         items: [],
+        // editPost: {},
         status: 'loading',
     },
     tags: {
         items: [],
         status: 'loading',
     },
+    editPost: {
+        item: null ,
+        status: false,
+    },
 };
 
 const postsSlice = createSlice({
     name: 'posts',
     initialState,
-    reducers: {},
+    reducers: {
+        setEditPost: (state, action) =>{
+            state.editPost.item = action.payload;
+            // state.editPost.status = true;
+        },
+    },
     extraReducers: {
         [feathPosts.pending]: (state) => {
             state.posts.status = "loading";
@@ -56,4 +70,6 @@ const postsSlice = createSlice({
     },
 });
 
+export const { setEditPost } = postsSlice.actions;
+ 
 export const postsReducer = postsSlice.reducer;

@@ -11,11 +11,11 @@
         color: black;
     }
     .post {
-        height: 134px;
+        // height: 134px;
         padding: 10px;
         display: flex;
-        flex-direction: row;
-        // justify-content: center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         text-align: center;
         border-radius: 40px;
